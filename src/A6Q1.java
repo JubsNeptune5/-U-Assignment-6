@@ -19,7 +19,7 @@ public class A6Q1 {
         //Create scanner for input
         Scanner input = new Scanner(System.in);
         
-        //ASk how many students
+        //Ask how many students
         System.out.println("How many students are the class");
         //Create variable for how much students
         int s = input.nextInt();
@@ -27,7 +27,7 @@ public class A6Q1 {
         //Creat array for storing marks of the students
          double[] marks = new double[s];
          
-         //find the length of the array\
+         //find the length of the array
          int length = marks.length;
          //Ask the marks of the students
          System.out.println("Please enter the marks");
