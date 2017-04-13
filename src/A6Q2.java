@@ -31,7 +31,7 @@ public class A6Q2 {
          int length = height.length;
          
          //Ask the the heights
-         System.out.println("Please enter the marks");
+         System.out.println("Please enter their heights");
          //Create for loop to go through each section of the array
          for (int h = 0; h <length; h++) {
              //Find the value at variable m
