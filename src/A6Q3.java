@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 
 /**
- *
+ *Create an array to order numbers in ascending order
  * @author laveh2107
  */
 public class A6Q3 {
