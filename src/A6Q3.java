@@ -33,23 +33,16 @@ public class A6Q3 {
         int a = num[1];
         int b = num[0];
          
-        //if the number is less than the second number the order of the array will stay the same
-        if(num[0]<num[1]){
-            
-            //Print out the same array as before
-            System.out.println("The Digits in accending order are : "+num[0]+", "+num[1]);
-        }
-        
         //if first number is greater then the second change the order for the numbers in the array 
         if(num[0]>num[1]){
             
             //Change the values of places int he array to match asending order
             num[0] = a;
-            num[1]=b;
-            
-            //Print out new array
-            System.out.println("The Digits in accending order are : "+num[0]+", "+num[1]);
+            num[1] = b;
         }
+            //Print out new array if the numbers changed or the original array
+            System.out.println("The Digits in accending order are : "+num[0]+", "+num[1]);
+        
  
     }
 }
