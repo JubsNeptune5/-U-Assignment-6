@@ -30,22 +30,22 @@ public class A6Q4 {
         }
         System.out.println("The numbers in acsending order are:");
         //Do the promgram while the counter is less then the length of the array so it covers all the places in the array
-        //while (t < marks.length) {
-        for (int i = 0; i < (marks.length - 1); i++) {
-            double x = marks[i];
-            for (int j = 1; j < marks.length; j++) {
-                double y = marks[j];
+        for (int r = 0; r < 10; r++) {
 
-                if (x > y) {
+
+            for (int i = 0; i < 9; i++) {
+                if (marks[i] < marks[i + 1]) {
+                    double x = marks[i];
+                    //for (int j = 1; j < marks.length; j++) {
+                    double y = marks[i + 1];
+
+
                     marks[i] = y;
-                    marks[j] = x;
+                    marks[i + 1] = x;
+
                     System.out.println(marks[i]);
                 }
-
-                //t++;
             }
-
         }
-        //}
     }
 }
