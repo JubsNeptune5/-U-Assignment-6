@@ -6,7 +6,7 @@ import java.util.Scanner;
  * and open the template in the editor.
  */
 /**
- *
+ *Find the median within the array
  * @author laveh2107
  */
 public class A6Q5 {
@@ -55,18 +55,26 @@ public class A6Q5 {
             System.out.println(marks[i]);
         }
 
+        //Create two variables to determine if the array has 
+        //a odd or even number of places in the array
         int q = marks.length / 2;
-        double w = marks.length / 2;
-        if (q == w) {
-            System.out.println("The median of the marks is:");
-            System.out.println(marks[q]);
-        }
-        if (q < w) {
-            if (w > (q + 1)) {
-                System.out.println("The median of the marks is:");
-                System.out.println(marks[w]);
-            }
+        double w = marks.length / 2.0;
 
+        System.out.println("The median is: ");
+
+        //There are even places in the array if both variables are are equal
+        if (q == w) {
+            //Subratct the two middle numbers the divid to get the median of the array
+            double a = (marks[q - 1] + marks[q]) / 2.0;
+            System.out.println(a);
         }
+
+        //There are even places in the array if both variables are are equal
+        if (q != w) {
+            //The middle number is the median
+            double b = marks[q];
+            System.out.println(b);
+        }
+
     }
 }
