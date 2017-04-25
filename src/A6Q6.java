@@ -68,22 +68,24 @@ public class A6Q6 {
         double avg = s / marks.length;
 
         //State the info given
-        if(avg>=100){
-            System.out.println("WHooo, Your class must already work at Google");
-        }else{
-            if(avg>=70){
+        //Give the teacher a good intro based on the class's marks
+        if (avg >= 100) {
+            System.out.println("Whooo, Your class must already work at Google");
+        } else {
+            if (avg >= 70) {
                 System.out.println("Exellent, your teaching must have paid off");
             }
         }
-        if(avg>=50){
-              System.out.println("Here is the information on your satisfactory class");      
-            }else{if(avg<50){
+        if (avg >= 50) {
+            System.out.println("Here is the information on your satisfactory class");
+        } else {
+            if (avg < 50) {
                 System.out.println("Wow, they must not know how to use a keyboard");
             }
-}
-        
+        }
+
         System.out.println("The Lowest Mark is: " + marks[x - 1]);
         System.out.println("The Highest Mark is: " + marks[0]);
-        System.out.println("The Average of the "+x+" Students is: " + avg);
+        System.out.println("The Average of the " + x + " Students is: " + avg);
     }
 }
