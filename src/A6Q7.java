@@ -25,8 +25,8 @@ public class A6Q7 {
         int sieve[] = new int[1000];
 
         //Have the start of the array be two and the rest following two consecutivly
-        for (int i = 0; i < sieve.length; i++) {
-            sieve[i] = i + 2;
+        for (int i = 2; i < sieve.length; i++) {
+            sieve[i] = i;
         }
 
         //Create a counter to keep track of the prime number
@@ -50,22 +50,22 @@ public class A6Q7 {
 
         //Go throught the seive values to check when the number in the sequence 
         //isn't the same as the prime multiple
-        for (int i = 0; i < sieve.length; i++) {
+        for (int i = 2; i < sieve.length; i++) {
             //Go throught the values of the prime multiples
-            //for (int j = 1; j < sieve.length; j++) {
+            for (int j = 1; j < sieve.length; j++) {
                 //Check if the number in sequence is a prime or if the number
                 //isn't already a prime number used
-                if (sieve[i] > M[i+1]){ //|| i >= P) {
+                if (sieve[i] != M[j] && i >= P) {
                     prime[i] = i;
                 }
                 //Add number to the array containing the multiple
-                if(sieve[i] == M[i+1]){
-                    noTouch[i]=i;
+                if (sieve[i] == M[j]) {
+                    noTouch[i] = i;
                 }
-            //}
+            }
         }
         //Create for loop rto read out the prime numbers
-        for (int i = 0; i < sieve.length; i++) {
+        for (int i = 2; i < sieve.length; i++) {
             System.out.println(prime[i]);
         }
     }
