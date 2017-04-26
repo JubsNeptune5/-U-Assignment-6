@@ -1,8 +1,10 @@
+
+import java.util.Scanner;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author laveh2107
@@ -13,6 +15,58 @@ public class A6Q7 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //Create input scanner
+        Scanner input = new Scanner(System.in);
+
+        //Create counter for going through each spot in the array to find the prime numbers
+        int x = 0;
+
+        //Create an array for the cvonsecutive numbers
+        int sieve[] = new int[1000];
+
+        //Have the start of the array be two and the rest following two consecutivly
+        for (int i = 0; i < sieve.length; i++) {
+            sieve[i] = i + 2;
+        }
+
+        //Create a counter to keep track of the prime number
+        int P = 2;
+
+        //Create array to hold the multiples of the prime number
+        int M[] = new int[1000];
+
+        //Set values for P
+        for (int i = 1; i < sieve.length; i++) {
+            //Make the multiples of the prime number
+            M[i] = i * P;
+        }
+        System.out.println("Prime numbers:");
+
+        //Create an array to store the prime numbers
+        int prime[] = new int[1000];
+
+        //Cretae an array to store numbers that are multiples
+        int noTouch[] = new int[1000];
+
+        //Go throught the seive values to check when the number in the sequence 
+        //isn't the same as the prime multiple
+        for (int i = 0; i < sieve.length; i++) {
+            //Go throught the values of the prime multiples
+            //for (int j = 1; j < sieve.length; j++) {
+                //Check if the number in sequence is a prime or if the number
+                //isn't already a prime number used
+                if (sieve[i] > M[i+1]){ //|| i >= P) {
+                    prime[i] = i;
+                }
+                //Add number to the array containing the multiple
+                if(sieve[i] == M[i+1]){
+                    noTouch[i]=i;
+                }
+            //}
+        }
+        //Create for loop rto read out the prime numbers
+        for (int i = 0; i < sieve.length; i++) {
+            System.out.println(prime[i]);
+        }
     }
 }
