@@ -45,13 +45,14 @@ public class A6Q7 {
                     //Check if the number in sequence is a prime or if the number
                     //isn't already a prime number used
                     if (sieve[i] != (sieve[j] - 1) * P || i >= P) {
-                        //prime[i] = i;
-                        if(x==1000){
-                            System.out.println(i);
+                        prime[i] = i;
+                      
                         }
-                    }
+                    }  if(x==1000){
+                            System.out.println(i);
                 }
             }
+            //Fix this!!!!!!!!!!!!!!!!!!!!!!!!
             P++;
            x++;
         }
