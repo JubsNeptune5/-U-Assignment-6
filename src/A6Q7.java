@@ -22,7 +22,7 @@ public class A6Q7 {
         int x = 0;
 
         //Create an array for the cvonsecutive numbers
-        int sieve[] = new int[1000];
+        int sieve[] = new int[1001];
 
         //Have the start of the array be two and the rest following two consecutivly
         for (int i = 2; i < sieve.length; i++) {
@@ -32,35 +32,20 @@ public class A6Q7 {
         //Create a counter to keep track of the prime number
         int P = 2;
 
-        //Create array to hold the multiples of the prime number
-        int M[] = new int[1000];
-
-        //Set values for P
-        for (int i = 1; i < sieve.length; i++) {
-            //Make the multiples of the prime number
-            M[i] = i * P;
-        }
         System.out.println("Prime numbers:");
 
         //Create an array to store the prime numbers
-        int prime[] = new int[1000];
-
-        //Cretae an array to store numbers that are multiples
-        int noTouch[] = new int[1000];
+        int prime[] = new int[1001];
 
         //Go throught the seive values to check when the number in the sequence 
         //isn't the same as the prime multiple
         for (int i = 2; i < sieve.length; i++) {
             //Go throught the values of the prime multiples
-            for (int j = 1; j < sieve.length; j++) {
+            for (int j = 2; j < sieve.length; j++) {
                 //Check if the number in sequence is a prime or if the number
                 //isn't already a prime number used
-                if (sieve[i] != M[j] && i >= P) {
+                if (sieve[i] != (sieve[j] - 1) * P && i >= P) {
                     prime[i] = i;
-                }
-                //Add number to the array containing the multiple
-                if (sieve[i] == M[j]) {
-                    noTouch[i] = i;
                 }
             }
         }
