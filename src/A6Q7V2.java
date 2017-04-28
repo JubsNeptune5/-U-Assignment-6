@@ -26,9 +26,16 @@ public class A6Q7V2 {
 
         //Create variable for the  multiple of the numbers
         int P = 2;
-        
-        for (int i = 0; i < sieve.length; i++) {
-            
+
+        for (int i = 2; i < sieve.length; i++) {
+            while (x < sieve.length) {
+                if (x != (x - 1) * P) {
+                    sieve[i] = x;
+                    x++;
+                }
+            }
+            System.out.println(sieve[i]);
+
         }
 
 
